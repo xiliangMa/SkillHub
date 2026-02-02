@@ -605,9 +605,13 @@ volumes:
 - [x] Project setup
 - [x] Database schema
 - [x] GitHub crawler
-- [x] Basic API
+- [x] Basic API ✅ 2026-02-02
+  - GET /health - 健康检查
+  - GET /api/skills - 技能列表
+  - GET /api/skills/:id - 技能详情
+  - GET /api/admin/stats - 管理统计
 - [x] Frontend website
-- [x] User authentication
+- [ ] User authentication (注册/登录API) - 进行中
 
 ### Phase 2: Core Features (Week 3-4)
 - [ ] Payment integration
