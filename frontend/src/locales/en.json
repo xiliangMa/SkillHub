@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "Discover Premium AI Skills",
+    "subtitle": "Browse thousands of curated skills for your AI agents",
+    "cta": "Explore Skills"
+  },
+  "skills": {
+    "title": "Skills",
+    "stars": "stars",
+    "forks": "forks",
+    "downloads": "downloads",
+    "install": "Install",
+    "buy": "Buy",
+    "free": "Free",
+    "searchPlaceholder": "Search skills...",
+    "allLanguages": "All Languages",
+    "trending": "Trending Skills",
+    "viewAll": "View All"
+  },
+  "auth": {
+    "login": "Sign In",
+    "register": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "name": "Name",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  },
+  "payment": {
+    "wechat": "WeChat Pay",
+    "alipay": "Alipay",
+    "processing": "Processing payment...",
+    "success": "Payment successful!",
+    "failed": "Payment failed",
+    "buy": "Buy Now",
+    "price": "Price"
+  }
+}

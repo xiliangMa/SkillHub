@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "发现优质AI技能",
+    "subtitle": "浏览数千个精心策划的AI智能体技能",
+    "cta": "探索技能"
+  },
+  "skills": {
+    "title": "技能",
+    "stars": "标星",
+    "forks": "分叉",
+    "downloads": "下载",
+    "install": "安装",
+    "buy": "购买",
+    "free": "免费",
+    "searchPlaceholder": "搜索技能...",
+    "allLanguages": "所有语言",
+    "trending": "热门技能",
+    "viewAll": "查看全部"
+  },
+  "auth": {
+    "login": "登录",
+    "register": "注册",
+    "email": "邮箱",
+    "password": "密码",
+    "name": "名称",
+    "loginButton": "登录",
+    "registerButton": "创建账户",
+    "noAccount": "没有账户？",
+    "hasAccount": "已有账户？"
+  },
+  "payment": {
+    "wechat": "微信支付",
+    "alipay": "支付宝",
+    "processing": "处理支付中...",
+    "success": "支付成功！",
+    "failed": "支付失败",
+    "buy": "立即购买",
+    "price": "价格"
+  }
+}
