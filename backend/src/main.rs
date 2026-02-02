@@ -1,10 +1,4 @@
-use axum::{
-    routing::get,
-    Router,
-    Json,
-    response::IntoResponse,
-    http::StatusCode,
-};
+use axum::{routing::get, Router, Json, response::IntoResponse};
 use tokio::net::TcpListener;
 use tracing_subscriber::fmt;
 use serde::Serialize;
@@ -30,20 +24,20 @@ async fn health() -> Json<HealthResponse> {
     })
 }
 
-async fn not_found() -> impl IntoResponse {
-    (StatusCode::NOT_FOUND, Json(ApiResponse::<()> {
-        success: false,
-        data: None,
-        message: Some("Not found".to_string()),
-    }))
-}
-
-async fn root() -> impl IntoResponse {
-    Json(ApiResponse::<()> {
+async fn root() -> Json<ApiResponse<()>> {
+    Json(ApiResponse {
         success: true,
         data: None,
         message: Some("SkillHub API v0.1.0".to_string()),
     })
+}
+
+async fn not_found() -> impl IntoResponse {
+    (axum::http::StatusCode::NOT_FOUND, Json(ApiResponse::<()> {
+        success: false,
+        data: None,
+        message: Some("Not found".to_string()),
+    }))
 }
 
 #[tokio::main]
@@ -58,12 +52,12 @@ async fn main() -> anyhow::Result<()> {
         .unwrap_or(8080);
 
     let addr = format!("{}:{}", host, port);
-    
     tracing::info!("Starting SkillHub API on {}", addr);
 
     let app = Router::new()
         .route("/", get(root))
         .route("/health", get(health))
+        .route("/api/health", get(health))
         .fallback(not_found);
 
     let listener = TcpListener::bind(&addr).await?;
